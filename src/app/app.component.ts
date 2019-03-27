@@ -7,10 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   calcresult = '';
-  kinA;
-  ryoA;
-  kinB;
-  ryoB;
+  kinA:number = 0;
+  ryoA:number = 0;
+  kinB:number = 0;
+  ryoB:number = 0;
 
   calcAtoB(kinA,kinB,ryoA,ryoB){
     let tankaA = kinA/ryoA;
@@ -28,13 +28,16 @@ export class AppComponent {
   }
 
   clearAtoB(){
-   this.kinA.value = 0;
-   this.ryoA.value = 0;
+   this.kinA = 0;
+   this.ryoA = 0;
    this.kinB = 0;
    this.ryoB = 0;
    this.calcresult = "";
   }
 
+  selectControl(ctrl){
+    ctrl.select();
+  }
 
 }
 

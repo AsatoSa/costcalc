@@ -27,16 +27,16 @@
   <table>
     <tr>
       <td>
-        <h2>A</h2>
+        <h2>商品A</h2>
       </td>
       <td>
-        <h2>B</h2>
+        <h2>商品B</h2>
       </td>
     </tr>
     <tr>
       <td>
         <mat-form-field class="min-width">
-          <input [(ngModel)]="kinA" matInput type="number" placeholder="金額" >
+          <input [(ngModel)]="kinA" matInput type="number" placeholder="金額" onblur=kinA  >
         </mat-form-field>
       </td>
       <td>
@@ -59,13 +59,13 @@
     </tr>
     <tr>
       <td>
-        <button mat-raised-button color="primary" matTooltip="比較"
+        <button mat-raised-button class="btn-width" color="primary" matTooltip="比較"
           (click)="calcAtoB(kinA,kinB,ryoA,ryoB)">
           比較<mat-icon id="swap_vert">swap_vert</mat-icon>
         </button>
       </td>
       <td>
-        <button mat-raised-button color="primary" matTooltip="Clear"
+        <button mat-raised-button class="btn-width" color="primary" matTooltip="Clear"
           (click)="clearAtoB()">
           Clear<mat-icon id="clear">clear</mat-icon>
         </button>
